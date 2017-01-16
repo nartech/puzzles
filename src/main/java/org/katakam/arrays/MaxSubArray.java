@@ -43,8 +43,6 @@ end
  */
 package org.katakam.arrays;
 
-import java.util.Arrays;
-
 public class MaxSubArray{
 
     static int max(int first, int second){
