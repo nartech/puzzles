@@ -182,7 +182,7 @@ public class MaxDifferenceInArray {
 
 
         int[] samp1 = {-2,1,-3,4,-1,2,1,-5,4};
-        System.out.println("Maximum Difference matching the cirteria SubArray "+ maxDifference(samp1));
+        System.out.println("Maximum Difference matching the criteria: "+ maxDifference(samp1));
     }
 }
 
