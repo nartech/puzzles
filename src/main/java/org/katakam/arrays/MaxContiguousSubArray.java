@@ -43,7 +43,7 @@ end
  */
 package org.katakam.arrays;
 
-public class MaxSubArray{
+public class MaxContiguousSubArray {
 
     static int max(int first, int second){
         if (first > second)
@@ -64,6 +64,6 @@ public class MaxSubArray{
 
     public static void main(String[] args) {
         int[] samp1 = {-2,1,-3,4,-1,2,1,-5,4};
-        System.out.println("MaxSubArray "+max_subarray(samp1));
+        System.out.println("MaxContiguousSubArray "+max_subarray(samp1));
     }
 }
