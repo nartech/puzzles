@@ -106,9 +106,35 @@ Solution:
  */
 package org.katakam.arrays;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class MaxDifferenceInArray {
 
-    static int compute(int[] arr){
+    /*
+ * Complete the function below.
+ */
+
+    //brute force O(n^2)
+    static int maxDifference1(int[] a) {
+
+        int maxDiff = -1;
+
+        for (int i=0;i<a.length-1;i++){
+            for (int j=i;j<a.length;j++){
+                if (i<j && (a[j]-a[i] > maxDiff)){
+                    maxDiff = a[j]-a[i];
+                }
+
+            }
+
+        }
+        return maxDiff;
+    }
+
+    static int maxDifference(int[] arr){
         int max_elem = arr[0];
         int max_elem_index = 1;
         for (int i=1; i<arr.length; i++) {
@@ -129,11 +155,34 @@ public class MaxDifferenceInArray {
         }
 
         return max_diff;
-
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
+/*
+        Scanner in = new Scanner(System.in);
+        final String fileName = System.getenv("OUTPUT_PATH");
+        BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+        int res;
+
+        int _a_size = 0;
+        _a_size = Integer.parseInt(in.nextLine());
+        int[] _a = new int[_a_size];
+        int _a_item;
+        for(int _a_i = 0; _a_i < _a_size; _a_i++) {
+            _a_item = Integer.parseInt(in.nextLine());
+            _a[_a_i] = _a_item;
+        }
+
+        res = maxDifference(_a);
+        bw.write(String.valueOf(res));
+        bw.newLine();
+
+        bw.close();
+*/
+
+
         int[] samp1 = {-2,1,-3,4,-1,2,1,-5,4};
-        System.out.println("Maximum Difference matching the cirteria SubArray "+ compute(samp1));
+        System.out.println("Maximum Difference matching the cirteria SubArray "+ maxDifference(samp1));
     }
 }
+
